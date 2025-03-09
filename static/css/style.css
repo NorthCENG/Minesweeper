@@ -1,0 +1,78 @@
+/* -----------------------------
+   全局与布局
+----------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f4f4; /* 页面浅灰背景 */
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 控制区 */
+#controls {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#controls label {
+  margin-right: 10px;
+}
+
+#game-timer, #game-status{
+  text-align: center;
+  font-weight: bold;
+  margin: 10px auto;
+  color: #333;
+}
+
+
+/* -----------------------------
+   扫雷棋盘表格
+----------------------------- */
+#board {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#board td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-weight: bold;
+  /* 防止文本选择影响体验 */
+  user-select: none;
+}
+
+/* 已翻开：数字、空白、地雷的差异化背景颜色 */
+.empty {
+  background-color: #eee; /* 空白 */
+}
+
+.number[data-value="1"] { background-color: #ddd; color: blue; font-weight: bold;}
+.number[data-value="2"] { background-color: #ddd; color: green; font-weight: bold;}
+.number[data-value="3"] { background-color: #ddd; color: red; font-weight: bold;}
+.number[data-value="4"] { background-color: #ddd; color: darkblue; font-weight: bold;}
+.number[data-value="5"] { background-color: #ddd; color: brown; font-weight: bold;}
+.number[data-value="6"] { background-color: #ddd; color: cyan; font-weight: bold;}
+.number[data-value="7"] { background-color: #ddd; color: black; font-weight: bold;}
+.number[data-value="8"] { background-color: #ddd; color: gray; font-weight: bold;}
+
+.mine {
+  background-color: #cf2a2a; /* 雷格：红色 */
+  color: #fff;
+}
+
+/* 标记：旗帜 */
+.flag {
+  background-color: #ffc107; /* 黄 */
+  color: #000;
+}

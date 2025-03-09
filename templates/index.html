@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Minesweeper</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>在线扫雷</h1>
+  <div id="controls">
+    <label>行数: <input type="number" id="rows" value="8"></label>
+    <label>列数: <input type="number" id="cols" value="8"></label>
+    <label>雷数: <input type="number" id="mines" value="10"></label>
+    <button id="newGameBtn">新游戏</button>
+  </div>
+
+  <div id="game-timer">Time: 0 s</div>
+
+  <div id="game-status"></div>
+  <table id="board"></table>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
